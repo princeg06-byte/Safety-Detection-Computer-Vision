@@ -1,39 +1,45 @@
+```markdown
 # Safety Helmet and PPE Vest Detection System 👷‍♂️⚠️
 
-A real-time Computer Vision Tkinter application built with YOLOv8 to monitor and enforce workplace safety by detecting helmets and PPE vests. Developed during a Computer Vision Internship at SAIL, Bhilai Steel Plant.
+A real-time Computer Vision Tkinter application built with YOLOv8 to monitor and enforce workplace safety by detecting helmets and PPE vests. Developed during a Computer Vision Internship at the Steel Authority of India Limited (SAIL), Bhilai Steel Plant (BSP).
 
 ## ✨ Features
-
-* **Multi-Mode:** Process live webcam feeds, static images, or pre-recorded videos.
+* **Multi-Mode Detection:** Process live webcam feeds, static images, or pre-recorded videos.
 * **Real-Time Alerts:** Triggers an automated audio beep when a person is detected without a helmet.
-* **Auto-Save Logs:** Automatically captures and saves frames of safety violations (15-second cooldown to save storage).
-* **Dual Models:** Easily switch between `light weight.pt` (high speed) and `most accurate.pt` (high precision).
+* **Auto-Save Logs:** Automatically captures and saves frames of safety violations (operates on a 15-second cooldown to save storage).
+* **Dual Models:** Easily switch between high-speed inference and maximum precision.
 
-## 📁 Repository Structure
+## 📥 Download Model Weights
+Due to GitHub's file size limits, the trained YOLOv8 `.pt` models are hosted externally. **You must download these and place them in the same folder as `helmet5.py` before running.**
 
-* `helmet5.py`: Main application script (GUI + YOLO logic).
-* `light weight.pt` & `most accurate.pt`: Custom trained YOLOv8 models.
-* `requirements.txt`: Python dependencies.
-* `user_manual.pdf`: System operation guide.
+* ⚡ **[Download `light weight.pt`](https://icedrive.net/s/Vak1V7jFSgDB67u5t4hXtkXZYC34)** - Optimized for faster inference and higher FPS.
+* 🎯 **[Download `most accurate.pt`](https://icedrive.net/s/3j6f51RQVZ391D6vANhP5T23wi1a)** - Heavy model optimized for maximum detection accuracy.
 
 ## ⚙️ Quick Setup
 
-1. **Clone & Install Dependencies:**
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/yourusername/safety-helmet-detection.git](https://github.com/yourusername/safety-helmet-detection.git)
+   cd safety-helmet-detection
+
+```
+
+2. **Download Models:**
+Download the two `.pt` files from the links above and move them into this project folder.
+3. **Install Dependencies:**
 ```bash
-git clone https://github.com/yourusername/safety-helmet-detection.git
-cd safety-helmet-detection
 pip install -r requirements.txt
 
 ```
 
 
-2. **Update Local Paths:**
-Open `helmet5.py` and update the hardcoded paths to match your system:
-* **Model Path** (~Line 20): `self.model_path = r"path\to\light weight.pt"`
-* **Save Directory** (~Line 33): `self.auto_save_folder = r"path\to\your\save\folder"`
+4. **Update Local Paths:**
+Open `helmet5.py` in any text editor and update the hardcoded paths to match your system:
+* **Model Path** (~Line 20): `self.model_path = r"path\to\your\downloaded\light weight.pt"`
+* **Save Directory** (~Line 33): `self.auto_save_folder = r"path\to\your\desired\save\folder"`
 
 
-3. **Run the Application:**
+5. **Run the Application:**
 ```bash
 python helmet5.py
 
@@ -45,3 +51,7 @@ python helmet5.py
 
 **Prince**
 Computer Vision Project Intern @ Steel Authority of India Limited (SAIL), Bhilai Steel Plant (BSP)
+
+```
+
+```
