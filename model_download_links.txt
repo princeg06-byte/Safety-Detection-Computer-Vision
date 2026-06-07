@@ -1,0 +1,17 @@
+Safety Helmet and PPE Vest Detection - Model Weights
+
+Due to GitHub file size restrictions, the YOLOv8 model weights (.pt files) are hosted externally. 
+Please download them using the links below and place them in the same directory as the main script (helmet5.py).
+
+--------------------------------------------------
+1. Light Weight Model
+Description: Optimized for faster inference and higher FPS.
+File: light weight.pt
+Download Link: https://icedrive.net/s/Vak1V7jFSgDB67u5t4hXtkXZYC34
+
+--------------------------------------------------
+2. Most Accurate Model
+Description: Heavy model optimized for maximum detection accuracy.
+File: most accurate.pt
+Download Link: https://icedrive.net/s/3j6f51RQVZ391D6vANhP5T23wi1a
+--------------------------------------------------
